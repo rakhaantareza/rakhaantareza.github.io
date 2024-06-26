@@ -1,0 +1,42 @@
+/*=============== BUTTON ===============*/
+.button,
+.button__ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  border-radius: 5px;
+  font-size: var(--small-font-size);
+}
+
+.button {
+  background-color: var(--black-color);
+  padding: 1.1rem 1.5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: background-color 0.4s;
+  border-radius: 5px;
+
+  & i {
+    font-size: 1.25rem;
+  }
+  &:hover {
+    background-color: var(--first-color);
+  }
+  &__ghost {
+    border: 3px solid var(--black-color);
+    color: var(--black-color);
+    padding: 0.5rem;
+    transition: border 0.4s, color 0.4s;
+
+    & i {
+      font-size: 1.25rem;
+    }
+    &:hover {
+      border: 3px solid var(--first-color);
+      & i {
+        color: var(--first-color);
+      }
+    }
+  }
+}
