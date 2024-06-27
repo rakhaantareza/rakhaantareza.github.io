@@ -376,6 +376,9 @@
         transform: translateX(-6.5rem);
       }
     }
+    &__description-1 {
+      margin-top: 4rem;
+    }
     &__social {
       margin-left: 8rem;
       text-align: initial;
@@ -387,6 +390,7 @@
       }
       &-arrow {
         width: 40px;
+        margin-top: -1rem;
       }
       &-link {
         font-size: 1.5rem;

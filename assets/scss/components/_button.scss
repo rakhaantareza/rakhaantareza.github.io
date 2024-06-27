@@ -24,8 +24,8 @@
     background-color: var(--first-color);
   }
   &__ghost {
-    border: 3px solid var(--black-color);
-    color: var(--black-color);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
     padding: 0.5rem;
     transition: border 0.4s, color 0.4s;
 
@@ -33,7 +33,7 @@
       font-size: 1.25rem;
     }
     &:hover {
-      border: 3px solid var(--first-color);
+      border: 2px solid var(--first-color);
       & i {
         color: var(--first-color);
       }
