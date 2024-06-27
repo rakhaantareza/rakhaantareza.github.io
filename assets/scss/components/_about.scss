@@ -75,9 +75,9 @@
   &__description {
     position: relative;
     margin-bottom: 1.5rem;
-    color: var(--title-color);
+    color: var(--text-color);
     .highlight {
-      color: var(--first-color);
+      color: var(--title-color);
       font-weight: var(--font-semi-bold);
       cursor: pointer;
       &:hover,
@@ -89,7 +89,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    color: var(--title-color);
+    color: var(--text-color);
 
     .column {
       flex: 1;

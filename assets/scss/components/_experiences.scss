@@ -1,0 +1,140 @@
+/*=============== WORK ===============*/
+.work {
+  .container {
+    max-width: 970px;
+    padding: 20px;
+  }
+}
+
+.jobs {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+
+  .jobs-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .job-tab {
+      font-family: "Manrope", sans-serif;
+      padding: 0.8rem;
+      background: none;
+      border: none;
+      border-left: 2px solid var(--text-color-light);
+      color: var(--text-color-light);
+      text-align: left;
+      font-size: 14px;
+      font-weight: var(--font-normal);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        border-left-color 0.3s ease;
+
+      &.active {
+        background-color: var(--container-color);
+        color: var(--title-color);
+        border-left-color: var(--title-color);
+      }
+
+      &:hover {
+        background-color: rgba(100, 255, 218, 0.1);
+      }
+    }
+  }
+
+  .job-details {
+    flex: 3;
+    padding-left: 40px;
+
+    .job-content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      h3 {
+        margin: 0 0 10px 0;
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .job-duration {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: var(--text-color);
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 1rem;
+          padding-left: 20px;
+          position: relative;
+          font-size: var(--normal-font-size);
+          color: var(--text-color);
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--title-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs {
+    flex-direction: column;
+  }
+
+  .jobs-list {
+    flex-direction: row;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--text-color);
+
+    .job-tab {
+      flex: 1;
+      border-left: none;
+      border-bottom: 2px solid var(--text-color);
+      text-align: center;
+
+      &.active {
+        border-bottom-color: var(--title-color);
+      }
+    }
+  }
+
+  .job-details {
+    margin-left: -40px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .jobs-list .job-tab {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .job-details .job-content h3 {
+    font-size: 20px;
+  }
+
+  .job-details .job-content .job-duration {
+    font-size: 12px;
+  }
+
+  .job-details .job-content ul li {
+    font-size: 14px;
+  }
+}

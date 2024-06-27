@@ -161,6 +161,23 @@ const scrollActive = () => {
 };
 window.addEventListener("scroll", scrollActive);
 
+/*=============== TABS EXPERIENCES ===============*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".job-tab");
+  const contents = document.querySelectorAll(".job-content");
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((content) => content.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(`job-${index}`).classList.add("active");
+    });
+  });
+});
+
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
@@ -214,8 +231,8 @@ sr.reveal(`.home__tagline`, { delay: 1100 });
 sr.reveal(`.home__perfil, .home__info`, { delay: 1300 });
 sr.reveal(
   `.about__image, .contact__mail, .about__perfil,
-            .about__container .section__title-1, .about__info, 
+            .about__container, .section__title-1, .section__title-2, .about__info, 
             .contact__social, .contact__data`,
   { interval: 100 }
 );
-sr.reveal(`.services__card, .projects__card`, { interval: 100 });
+sr.reveal(`.jobs, .projects__card`, { interval: 100 });
