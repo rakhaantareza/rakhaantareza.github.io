@@ -47,24 +47,31 @@ const sendEmail = (e) => {
   e.preventDefault();
 
   // serviceID - templateID - #form - publicKey
-  emailjs.sendForm("", "", "#contact-form", "").then(
-    () => {
-      // Show sent message
-      contactMessage.textContent = "Message sent successfully ✅";
+  emailjs
+    .sendForm(
+      "service_kk2h4jl",
+      "template_vdjvcsb",
+      "#contact-form",
+      "T0s0vPTgmtlxaQn3t"
+    )
+    .then(
+      () => {
+        // Show sent message
+        contactMessage.textContent = "Message sent successfully ✅";
 
-      // Remove message after five seconds
-      setTimeout(() => {
-        contactMessage.textContent = "";
-      }, 5000);
+        // Remove message after five seconds
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 5000);
 
-      // Clear input fields
-      contactForm.reset();
-    },
-    () => {
-      // Show error message
-      contactMessage.textContent = "Message not sent (service error) ❌";
-    }
-  );
+        // Clear input fields
+        contactForm.reset();
+      },
+      () => {
+        // Show error message
+        contactMessage.textContent = "Message not sent (service error) ❌";
+      }
+    );
 };
 
 contactForm.addEventListener("submit", sendEmail);
